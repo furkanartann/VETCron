@@ -1,0 +1,188 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f26522;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-ink-50: #fafafa;
+  --color-ink-100: #f5f5f5;
+  --color-ink-200: #e5e5e5;
+  --color-ink-300: #d4d4d4;
+  --color-ink-400: #a3a3a3;
+  --color-ink-500: #737373;
+  --color-ink-600: #525252;
+  --color-ink-700: #404040;
+  --color-ink-800: #262626;
+  --color-ink-900: #171717;
+  --color-ink-950: #0a0a0a;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-white text-ink-800 antialiased;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-500 via-brand-600 to-brand-500 bg-clip-text text-transparent;
+  }
+
+  .card {
+    @apply rounded-2xl border border-ink-200/80 bg-white shadow-sm shadow-ink-900/5;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:border-brand-200 hover:shadow-md hover:shadow-brand-500/10;
+  }
+
+  .section-container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-32;
+  }
+
+  .scroll-hint {
+    @apply flex items-center justify-center gap-1.5 text-xs text-ink-400;
+  }
+
+  .mockup-scroll {
+    @apply -mx-4 overflow-x-auto px-4 pb-2 sm:-mx-6 sm:px-6 lg:mx-0 lg:overflow-visible lg:px-0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .mockup-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .section-alt {
+    @apply bg-ink-50;
+  }
+
+  /* Hero video — full cover */
+  .hero-bg {
+    @apply absolute inset-0 z-0 overflow-hidden;
+  }
+
+  .hero-bg video {
+    @apply absolute inset-0 h-full w-full object-cover object-center;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slide-in {
+    from { opacity: 0; transform: translateX(-6px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes grow-bar {
+    from { width: 0; }
+  }
+
+  @keyframes pulse-soft {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out both;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out both;
+  }
+
+  .animate-slide-in {
+    animation: slide-in 0.5s ease-out both;
+  }
+
+  .animate-grow-bar {
+    animation: grow-bar 1s ease-out both;
+  }
+
+  .animate-pulse-soft {
+    animation: pulse-soft 2s ease-in-out infinite;
+  }
+
+  /* Original PNG logo — white on dark backgrounds via luminance mask */
+  .logo-white-mask {
+    aspect-ratio: 4.2 / 1;
+    background-color: white;
+    mask-image: url(/vetcron-logo.png);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: left center;
+    -webkit-mask-image: url(/vetcron-logo.png);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: left center;
+  }
+
+  /* Legal pages — readable prose */
+  .legal-prose section + section {
+    @apply mt-10 border-t border-ink-100 pt-10;
+  }
+
+  .legal-prose h2 {
+    @apply text-xl font-semibold tracking-tight text-ink-950 sm:text-2xl;
+  }
+
+  .legal-prose h3 {
+    @apply mt-6 text-base font-semibold text-ink-800;
+  }
+
+  .legal-prose p {
+    @apply mt-4 text-base leading-relaxed text-ink-600;
+  }
+
+  .legal-prose ul {
+    @apply mt-4 list-disc space-y-2 pl-5 text-base leading-relaxed text-ink-600;
+  }
+
+  .legal-prose li {
+    @apply pl-1;
+  }
+
+  .legal-prose a {
+    @apply font-medium text-brand-600 underline decoration-brand-300 underline-offset-2 transition-colors hover:text-brand-700;
+  }
+
+  .legal-prose strong {
+    @apply font-semibold text-ink-800;
+  }
+}
