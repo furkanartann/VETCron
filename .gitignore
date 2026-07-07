@@ -15,6 +15,7 @@ dist-ssr
 # Source media duplicates (optimized copies live in public/)
 *.webm
 !public/*.webm
+!vetcron-hero.webm
 
 # Editor directories and files
 .vscode/*

@@ -1,35 +1,116 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/vetcron-symbol.png" />
-    <link rel="apple-touch-icon" href="/vetcron-symbol.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#0a0a0a" />
-    <meta
-      name="description"
-      content="VETCron is an AI-powered veterinary clinic management platform. Streamline patient records, appointments, billing, and clinical decisions — built for modern veterinary practices."
-    />
-    <meta
-      name="keywords"
-      content="veterinary software, clinic management, AI veterinary, pet health records, VETCron"
-    />
-    <meta property="og:title" content="VETCron — AI-Powered Veterinary Clinic Management" />
-    <meta
-      property="og:description"
-      content="Modern clinic management with AI-assisted diagnosis and treatment support. Currently in active development."
-    />
-    <meta property="og:type" content="website" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <title>VETCron — AI-Powered Veterinary Clinic Management Software</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VETCron — AI destekli veteriner klinik yönetim yazılımı. Teşhis, tedavi ve hasta yönetiminde yapay zeka. Çok yakında.">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:title" content="VETCron — Veteriner Klinik Yönetiminde Yapay Zeka">
+  <meta property="og:description" content="Klinik yönetimini teknolojik hale getiriyoruz. Çok yakında vetcron.com">
+  <meta property="og:type" content="website">
+  <title>VETCron — Çok Yakında</title>
+  <link rel="icon" type="image/png" href="VC.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="video-bg" aria-hidden="true">
+    <video id="hero-video" autoplay muted loop playsinline>
+      <source src="vetcron-hero.webm" type="video/webm">
+    </video>
+    <div class="video-overlay"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <div class="glow glow-1" aria-hidden="true"></div>
+  <div class="glow glow-2" aria-hidden="true"></div>
+
+  <main class="page">
+    <header class="header">
+      <div class="logo-wrap">
+        <img src="VC.png" alt="VETCron Logo" class="logo" width="72" height="72">
+        <span class="brand">VETCron</span>
+      </div>
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        Yapım Aşamasında
+      </div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">Çok Yakında</p>
+      <h1 class="headline">
+        Veteriner klinik yönetiminde
+        <span class="gradient-text">yapay zeka devrimi</span>
+      </h1>
+      <p class="subheadline">
+        VETCron, teşhis ve tedavi süreçlerinden hasta ekleme ve güncellemeye kadar
+        tüm klinik operasyonlarınızı AI ile güçlendiren yeni nesil veteriner yazılımıdır.
+        Klinik yönetimini teknolojik hale getiriyoruz.
+      </p>
+
+      <div class="features">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.5 15.3l-1.47 4.41a.75.75 0 01-.71.54H6.68a.75.75 0 01-.71-.54L4.5 15.3"/>
+            </svg>
+          </div>
+          <h3>AI Destekli Teşhis</h3>
+          <p>Veriye dayalı teşhis önerileri ile daha hızlı ve doğru kararlar.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/>
+            </svg>
+          </div>
+          <h3>Akıllı Hasta Yönetimi</h3>
+          <p>Hasta kayıt, güncelleme ve takip süreçlerinde AI destekli otomasyon.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z"/>
+            </svg>
+          </div>
+          <h3>Dijital Klinik Operasyonları</h3>
+          <p>Randevu, stok ve ekip yönetimini tek platformda birleştirin.</p>
+        </div>
+      </div>
+
+      <form class="notify-form" id="notify-form" novalidate>
+        <div class="input-group">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="E-posta adresiniz"
+            autocomplete="email"
+            required
+          >
+          <button type="submit" class="btn-primary">
+            <span>Haberdar Ol</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+            </svg>
+          </button>
+        </div>
+        <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; 2026 VETCron. Tüm hakları saklıdır.</p>
+      <div class="footer-links">
+        <a href="mailto:info@vetcron.com">info@vetcron.com</a>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
 </html>
